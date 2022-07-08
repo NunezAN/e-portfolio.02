@@ -8,7 +8,115 @@
 li{
     list-style: none;
 }
+section{
+    background-color: rgb(245, 245, 245);
+}
+a{
+    text-decoration: none;
+}
 
+.click:hover{
+    transform: scale(1.1);
+}
+.click:active{                      /*:active is when clicked */
+    transform: scale(0.85);
+}
+.click{
+    transition: all 300ms ease;
+}
+button{
+    cursor: pointer;
+}
+/*--Landing Page--*/
+#landing-page{
+    min-height: 100vh;
+}
+.header{
+    position: absolute;
+    top: 50%;                       /*centers header to center of the page */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    max-width: 1000px;
+    padding: 0 30px;
+}
+.highlight--text{
+    color: green;
+    font-weight: 700;
+}
+.title{
+    text-align: left;
+    font-size: 120px;
+    margin-bottom: 12px;
+    line-height: 1;
+}
+.header__para{
+    font-size: 24px;
+    line-height: 2;
+    max-width: 450px;
+}
+.social__links{
+    margin-top: 16px;
+    display: flex;
+}
+.social__link{
+    background-color: green;
+    color: white;
+    font-size: 18px;
+    padding: 6px;
+    width: 32px;
+    height: 32px;
+    margin-right: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+.mail__button{
+    width: 70px;
+    height: 70px;
+    font-size: 32px;
+    border-radius: 50%;
+    border: none;
+    background-color: #242424;
+    color: white;
+    position: absolute;
+    bottom: 32px;
+    right: 40px;
+}
+.scroll{
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translatex(-50%);
+
+}
+.scroll__icon{
+    width: 20px;
+    height: 30px;
+    border: 2px solid black;
+    border-radius: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.scroll__icon::after{
+    content: "";
+    width: 4px;
+    height: 6px;
+    background-color: #242424;
+    border-radius: 2px;
+    animation: scroll 1000ms infinite alternate-reverse ;
+}
+
+@keyframes scroll{
+    0%{
+        transform: translateY(3px);
+    }
+    100%{
+        transform: translateY(-3px);
+    }
+}
 /*--Nav Bar--*/
 nav{
     display: flex;
@@ -17,6 +125,7 @@ nav{
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
+    padding: 0 20px
 }
 .nav__link--list{
     display: flex;
@@ -29,11 +138,18 @@ nav{
     width: 50px;
     filter: invert(1);
 }
+.nav__link:hover{
+    text-decoration: underline;
+}
+.nav__link--darkmode{
+    cursor: pointer;
+}
 .nav__link{
     margin: 0 12px;
+    
 }
 .nav__link--anchor{
-    text-decoration: none;
+    
     font-size: 16px;
     color: #242424;
     font-weight: 700;
