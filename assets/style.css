@@ -29,6 +29,7 @@ a{
     transform: scale(0.85);
 }
 .click{
+    cursor: pointer;
     transition: all 300ms ease;
 }
 button{
@@ -354,6 +355,15 @@ nav{
     100%{
         transform: rotate(360deg);
     }
+}
+.modal__exit{
+    position: absolute;
+    top: 30px;
+    right: 40px;
+    color: white;
+    font-size: 36px;
+    z-index: 100;
+
 }
 /*--Projects--*/
 
