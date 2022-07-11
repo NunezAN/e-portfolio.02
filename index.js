@@ -43,7 +43,7 @@ function contact(event) {
     .then(() => {
       loading.classList.remove("modal__overlay--visible");
       success.classList += " modal__overlay--visible";
-      console.log("Email Sent!!");
+      
     }).catch(() => {
         loading.classList.remove("modal__overlay--visible");
         alert("The email servise is temporarily unavailable. Please contact me directly at alex101nunez@gmail.com");
@@ -51,7 +51,6 @@ function contact(event) {
 
 }
 function toggleModal(){
-    console.log("Modal toggeled!!")
     if(isModalOpen){
         isModalOpen = false;
         document.body.classList.remove("modal--open")
