@@ -20,7 +20,7 @@
    })();
 </script>
   </head>
-  <body>
+  <body class="dark-theme">
     <section id="landing-page">
       <nav>
         <figure>
@@ -30,32 +30,34 @@
           <li class="nav__link">
             <a
               href=""
-              class="nav__link--anchor link__hover-effect link__hover-effect--black"
+              class="nav__link--anchor link__hover-effect link__hover-effect--highlight"
               >About</a
             >
           </li>
           <li class="nav__link">
             <a
               href=""
-              class="nav__link--anchor link__hover-effect link__hover-effect--black"
+              class="nav__link--anchor link__hover-effect link__hover-effect--highlight"
               >Projects</a
             >
           </li>
           <li class="nav__link" onclick="toggleModal()">
             <a
               href="#"
-              class="nav__link--anchor link__hover-effect link__hover-effect--black">Contact</a
+              class="nav__link--anchor link__hover-effect link__hover-effect--highlight">Contact</a
             >
           </li>
-          <li class="nav__link nav__link--darkmode click">
-            <i class="fa-solid fa-circle-half-stroke"></i>
+          <li class="nav__link click" onclick = "toggleContrast()">
+            <a href="#" class="nav__link--anchor">
+                <i class="fa-solid fa-circle-half-stroke"></i>
+            </a>
           </li>
         </ul>
       </nav>
       <header class="header">
         <div class="header__content">
           <h1 class="title robot--text">Hi, my name is</h1>
-          <h2 class="title highlight--text">Alexis Nunez</h2>
+          <h2 class="title highlight--text-title">Alexis Nunez</h2>
           <p class="header__para">
             I'm a
             <span class="highlight--text">Frontend Software Engineer</span> with
