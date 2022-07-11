@@ -542,6 +542,7 @@ nav {
 /*--Footer--*/
 
 footer {
+    position: relative;
   background-color: #242424;
   display: flex;
 }
@@ -565,4 +566,66 @@ footer {
 .footer__social--link,
 .footer__copyright {
   color: white;
+}
+
+/*SHAPES*/
+
+/*Shapes on the first row
+height = 15vh
+
+Shapes on the second row
+height = 50vh
+
+Shapes on the third row
+height = 85vh
+
+Shapes on the first column
+width = 5vw
+
+Shapes on the second column
+height = 50vh
+
+Shapes on the third column
+height = 80vw
+
+*/
+.shape{
+    position:fixed;
+}
+
+.shape--0{
+    top: 15vh;
+    left: 5vw;
+}
+.shape--1{
+    top: 15vh;
+    left: 50vw;
+}
+.shape--2{
+    top: 15vh;
+    left: 80vw;
+}
+.shape--3{
+    top: 50vh;
+    left: 5vw;
+}
+.shape--4{
+    top: 50vh;
+    left: 50vw;
+}
+.shape--5{
+    top: 50vh;
+    left: 80vw;
+}
+.shape--6{
+    top: 85vh;
+    left: 5vw;
+}
+.shape--7{
+    top: 85vh;
+    left: 50vw;
+}
+.shape--8{
+    top: 85vh;
+    left: 80vw;
 }
