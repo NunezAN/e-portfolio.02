@@ -24,3 +24,15 @@ function contact(event) {
     });
 
 }
+let isModalOpen =false;
+function toggleModal(){
+    console.log("Modal toggeled!!")
+    if(isModalOpen){
+        isModalOpen = false;
+        document.body.classList.remove("modal--open")
+    }
+    else{
+        isModalOpen = true;
+        document.body.classList += " modal--open";
+    }
+}

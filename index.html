@@ -41,11 +41,10 @@
               >Projects</a
             >
           </li>
-          <li class="nav__link">
+          <li class="nav__link" onclick="toggleModal()">
             <a
-              href=""
-              class="nav__link--anchor link__hover-effect link__hover-effect--black"
-              >Contact</a
+              href="#"
+              class="nav__link--anchor link__hover-effect link__hover-effect--black">Contact</a
             >
           </li>
           <li class="nav__link nav__link--darkmode click">
@@ -62,7 +61,7 @@
             <span class="highlight--text">Frontend Software Engineer</span> with
             a strong passion for building web applications with great user
             experiences. <br />
-            Here's a bit more <span class="highlight--text">about me</span>
+            Here's a bit more <span class="highlight--text click" onclick="toggleModal()">about me</span>
           </p>
         </div>
         <div class="social__links">
@@ -85,7 +84,7 @@
           </a>
         </div>
       </header>
-      <button class="mail__button click">
+      <button class="mail__button click" onclick="toggleModal()">
         <i class="fa-solid fa-envelope"></i>
       </button>
       <a href="#projects" class="scroll">
@@ -145,6 +144,7 @@
           </div>
         </div>
         <div class="modal__half modal__contact">
+            <i class="fas fa-times modal__exit click" onclick="toggleModal()"></i>
           <h3 class="modal__title modal__title--contact">Lets have a chat!</h3>
           <h4 class="modal__sub-title modal__sub-title--contact">I'm currently open to new opportunities</h4>
           <form id="contact__form" onsubmit="contact(event)">
@@ -167,7 +167,6 @@
           </div>
           <div class="modal__overlay modal__overlay--success">Thanks for the message! Looking forward to speaking with you soon</div>
         </div>
-        <i class="fas fa-times modal__exit click"></i>
       </div>
     </section>
     <section id="projects">
@@ -229,9 +228,9 @@
               LinkedIn
             </a>
             <a
-              href=""
+              href="#"
               class="footer__social--link link__hover-effect link__hover-effect--white"
-            >
+             onclick="toggleModal()">
               Contact
             </a>
             <a
