@@ -10,6 +10,15 @@
       src="https://kit.fontawesome.com/6b8aa863e0.js"
       crossorigin="anonymous"
     ></script>
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+</script>
+<script src="./index.js"></script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init("CwS1CqbLvvLsQJ2RP");
+   })();
+</script>
   </head>
   <body>
     <section id="landing-page">
@@ -138,7 +147,7 @@
         <div class="modal__half modal__contact">
           <h3 class="modal__title modal__title--contact">Lets have a chat!</h3>
           <h4 class="modal__sub-title modal__sub-title--contact">I'm currently open to new opportunities</h4>
-          <form id="contact__form" action="">
+          <form id="contact__form" onsubmit="contact(event)">
             <div class="form__item">
                 <label class="form__item--label">Name</label>
                 <input class="form__item--input" name="user_name" type="text" required></input>
