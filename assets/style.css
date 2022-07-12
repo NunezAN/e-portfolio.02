@@ -1,17 +1,20 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Lato:ital,wght@0,400;1,700&family=Roboto:wght@400;700;900&family=Space+Mono&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Lato:ital,wght@0,400;1,700&family=Roboto:wght@400;700;900&family=Space+Mono&display=swap"); /*import fonts*/
 * {
-  margin: 0;
+  margin: 0; /*remove all default styling*/
   padding: 0;
   box-sizing: border-box;
-  font-family: "Roboto", sans-serif;
+  font-family: "Roboto", sans-serif; /*add font family*/
 }
 html {
+  /*add smooth scrolling effect to all html objects*/
   scroll-behavior: smooth;
 }
 li {
+  /*remove list item in front of each list item*/
   list-style: none;
 }
-section{
+section {
+  /*adds background image to all body sections*/
   background-color: rgb(245, 245, 245);
   background-image: repeating-linear-gradient(
       135deg,
@@ -23,178 +26,207 @@ section{
     linear-gradient(90deg, rgb(255, 255, 255), rgb(255, 255, 255));
 }
 a {
+  /*removes underline to anchor tags*/
   text-decoration: none;
 }
 
 .click:hover {
+  /*adds effect by making click class 10% bigger when hovered*/
   transform: scale(1.1);
 }
 .click:active {
-  /*:active is when clicked */
-  transform: scale(0.85);
+  /*:active is when clicked*/
+  transform: scale(0.85); /*clicked item is made 15% smaller*/
 }
 .click {
-  cursor: pointer;
-  transition: all 300ms ease;
+  /*click class to make objects behave as if they are clickable*/
+  cursor: pointer; /*changes behavior of mouse pointer to a hand cursor*/
+  transition: all 300ms ease; /*sets all transition elements to happen smoothly */
 }
 button {
+  /*changes cursor behavior for buttons*/
   cursor: pointer;
 }
 
 .container {
-  padding: 50px 0;
+  /*for each section add a container to set the*/
+  padding: 50px 0; /*width and add top and bottom padding*/
   width: 100%;
 }
 .row {
+  /*row is used to center and set left and right padding*/
   width: 100%;
   max-width: 1100px;
   padding: 0 12px;
   margin: 0 auto;
 }
 .link__hover-effect {
+  /*sets the link__hover effect class as the relative parent of ::after*/
   position: relative;
 }
+/*sets the characteristics of the hover effect for links*/
 .link__hover-effect::after {
-  content: "";
-  position: absolute;
-  bottom: -3px;
-  height: 3px;
-  width: 0%;
-  right: 0;
-  /* background-color: #f06449; */
-  transition: all 300ms ease;
+  content: ""; /*empty as there is no text being displayed*/
+  position: absolute; /*position absolute relative to the parent elemnt*/
+  bottom: -3px; /*sets the efect to happen 3px below the text*/
+  height: 3px; /*sets the height of the element*/
+  width: 0%; /*sets the intial width of the element to 0% */
+  right: 0; /*set the right to 0 as the elemnt will return to the right when not hovered*/
+  transition: all 300ms ease; /*sets the transition of all elements to smooth*/
 }
+/*sets the characteristics of the hover effect for the links*/
 .link__hover-effect:hover::after {
-  left: 0;
-  width: 100%;
+  left: 0; /*when hovering over element, effect will begin from the left*/
+  width: 100%; /*while hovered the effect will be 100% of the text width*/
 }
-.link__hover-effect--highlight::after{
-    background-color: #f06449;
+/*set the color of the link hover effect for the highlight*/
+.link__hover-effect--highlight::after {
+  background-color: #f06449;
 }
-.link__hover-effect--white::after{
+/*sets the color of the hover link effect in white*/
+.link__hover-effect--white::after {
   background-color: white;
 }
+/*sets the characteristics of the label for the form screen*/
 label {
   font-size: 14px;
   font-weight: bold;
 }
+/*sets the characteristics of the inputs for the form screen*/
 input,
 textarea {
   width: 100%;
   background-color: #242424;
   color: white;
   outline: none;
-  border: 3px solid #c0c4cc;
+  border: 3px solid #c0c4cc; /*display only the border on the bottom */
   border-top: none;
   border-left: none;
   border-right: none;
   height: 40px;
-  transition: all 300ms ease;
+  transition: all 300ms ease; /*display hover transitions smoothly */
 }
+/*set the parameter for the textarea input*/
 textarea {
   resize: vertical;
   height: 100px;
   margin-top: 8px;
 }
+/*change color of the border while hovering over the input fields*/
 input:hover,
 textarea:hover {
   border-color: #dcdfe6;
 }
+/*change color of the border while input field is actively being used*/
 input:focus,
 textarea:focus {
   border-color: #f06449;
 }
+/*default values for landing page elements to be displayed*/
 nav,
 .scroll,
 .header {
   opacity: 1;
   visibility: visible;
-  transition: all 600ms 800ms;
+  transition: all 600ms 800ms; /*transition to appear  smoothly*/
 }
+/*hides all elements in the langing page when modal is open*/
 .modal--open nav,
 .modal--open .scroll,
 .modal--open .header {
   opacity: 0;
   visibility: hidden;
-  transition: all 400ms;
+  transition: all 400ms; /*transition to disseapear elements smoothly */
 }
-/* DARK THEME*/
-.dark-theme section{
-    background-color: #0a192f;
-    background-image: repeating-linear-gradient(135deg, rgba(226, 226, 226,0.06) 0px, rgba(226, 226, 226,0.06) 2px,transparent 2px, transparent 4px),linear-gradient(180deg, rgb(10,25,47),rgb(10,25,47));
+/*--------------------------- 
+         DARK THEME
+----------------------------*/
+.dark-theme section {
+  background-color: #0a192f;
+  background-image: repeating-linear-gradient(
+      135deg,
+      rgba(226, 226, 226, 0.06) 0px,
+      rgba(226, 226, 226, 0.06) 2px,
+      transparent 2px,
+      transparent 4px
+    ),
+    linear-gradient(180deg, rgb(10, 25, 47), rgb(10, 25, 47));
 }
-.dark-theme #personal-logo{
-    filter: invert(0);
+.dark-theme #personal-logo {
+  filter: invert(0);
 }
 
 .dark-theme .section__title,
-.dark-theme .section__subtitle{
-    color: #233554;
-} 
+.dark-theme .section__subtitle {
+  color: #233554;
+}
 .dark-theme .title,
 .dark-theme .nav__link--anchor,
 .dark-theme .highlight--text,
-.dark-theme .fa-circle-half-stroke{
-    color: #64ffda;
+.dark-theme .fa-circle-half-stroke {
+  color: #64ffda;
 }
 .dark-theme .highlight--text-title,
-.dark-theme .section__title{
-    color: white;
+.dark-theme .section__title {
+  color: white;
 }
-.dark-theme .link__hover-effect--highlight::after{
-    background-color: #a8b2d1;
+.dark-theme .link__hover-effect--highlight::after {
+  background-color: #a8b2d1;
 }
-.dark-theme .header__para{
-    color: #ccd6f6;
+.dark-theme .header__para {
+  color: #ccd6f6;
 }
-.dark-theme .mail__button{
-    color: black;
-    background-color: white;
+.dark-theme .mail__button {
+  color: black;
+  background-color: white;
 }
-.dark-theme .social__link{
-    background-color: white;
-    color: #495670;
+.dark-theme .social__link {
+  background-color: white;
+  color: #495670;
 }
-.dark-theme .scroll__icon{
-    border-color: white;
+.dark-theme .scroll__icon {
+  border-color: white;
 }
-.dark-theme .scroll__icon::after{
-    background-color: #a8b2d1;
+.dark-theme .scroll__icon::after {
+  background-color: #a8b2d1;
 }
 .dark-theme .form__submit {
-    background-color: #64ffda;
-    border: 2px solid #64ffda;
-    color: black;
+  background-color: #64ffda;
+  border: 2px solid #64ffda;
+  color: black;
 }
-.dark-theme .form__submit:hover{
-    color: white;
+.dark-theme .form__submit:hover {
+  color: white;
 }
 .dark-theme .modal__about {
-    background-color: #a8b2d1;
+  background-color: #a8b2d1;
 }
-.dark-theme .modal__about .highlight--text{
-    color: black;
+.dark-theme .modal__about .highlight--text {
+  color: black;
 }
-.dark-theme .modal__overlay--success{
-    background-color: #64ffda;
+.dark-theme .modal__overlay--success {
+  background-color: #64ffda;
 }
 
-/*--Landing Page--*/
+/*--------------------------- 
+        Landing Page
+----------------------------*/
 #landing-page {
+  /*make the landing page the vertical height of the screen*/
   min-height: 100vh;
 }
+/*sets the header text to the center left of the landing page*/
 .header {
   position: absolute;
   top: 50%; /*centers header to center of the page */
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%); /*sets the text to be dead center*/
   width: 100%;
   max-width: 1000px;
   padding: 0 30px;
-  z-index: 1;
+  z-index: 1; /*set to not be overlapped by background figures*/
 }
-
-
+/*set characteristics of title text*/
 .title {
   text-align: left;
   font-size: 120px;
@@ -202,27 +234,33 @@ nav,
   line-height: 1;
   font-weight: 100;
 }
-.highlight--text{
-    color: #f06449;
-    font-weight: 700;
-  }
-  .highlight--text-title{
-    color: #f06449;
-    font-weight: 700;
-  }
+/*set characteristics of important text*/
+.highlight--text {
+  color: #f06449;
+  font-weight: 700;
+}
+/*set characteristics of the important title text*/
+.highlight--text-title {
+  color: #f06449;
+  font-weight: 700;
+}
+/*set the font for the title text*/
 .robot--text {
   font-family: "Space Mono", monospace;
   font-size: 24px;
 }
+/*set characteristics of paragraph text*/
 .header__para {
   font-size: 24px;
   line-height: 2;
   max-width: 450px;
 }
+/*set characteristics for the links in header */
 .social__links {
   margin-top: 16px;
   display: flex;
 }
+/*set characteristics for the individial links in header*/
 .social__link {
   background-color: rgb(59, 59, 59);
   color: white;
@@ -231,11 +269,12 @@ nav,
   width: 32px;
   height: 32px;
   margin-right: 12px;
-  display: flex;
+  display: flex;            /*center the logo into the circle border*/
   align-items: center;
   justify-content: center;
   border-radius: 50%;
 }
+/*sets the characteristics for the mail button on lower right*/
 .mail__button {
   width: 70px;
   height: 70px;
@@ -244,50 +283,53 @@ nav,
   border: none;
   background-color: black;
   color: white;
-  position: absolute;
+  /* position: absolute; */
   bottom: 32px;
   right: 40px;
   z-index: 100;
-  position: fixed;
+  position: fixed;         /*set for button to always appear on lower right after scrolling*/
   box-shadow: 0 12px 30px 0 rgb(0, 0, 0, 0.2);
 }
+/*characteristics for the position of the mouse figure*/
 .scroll {
   position: absolute;
   bottom: 20px;
   left: 50%;
-  transform: translatex(-50%);
+  transform: translatex(-50%);      /*sets the figure on the center horizontally*/
   z-index: 1;
 }
+/*characteristics for the mouse figure*/
 .scroll__icon {
   width: 20px;
   height: 30px;
   border: 2px solid black;
   border-radius: 24px;
-  display: flex;
+  display: flex;                /*display flex to center the scroll wheel*/
   align-items: center;
   justify-content: center;
   z-index: 1;
 }
+/*characteristics for the mouse scroll wheel*/
 .scroll__icon::after {
   content: "";
   width: 4px;
   height: 6px;
   background-color: #242424;
   border-radius: 2px;
-  animation: scroll 1000ms infinite alternate-reverse;
+  animation: scroll 1000ms infinite alternate-reverse;          /*sets the animation to continue infinetly and reverse*/
 }
-
+/*animation for the scroll wheel*/
 @keyframes scroll {
-  0% {
+  0% {                              /*at start begin 3px above the center*/
     transform: translateY(3px);
   }
-  100% {
+  100% {                            /*at end finish 3px below the center*/
     transform: translateY(-3px);
   }
 }
 /*--Nav Bar--*/
-nav {
-  display: flex;
+nav {                               /*sets characterstics of the nav section*/
+  display: flex;                /*display elemts in a row using display flex*/
   justify-content: space-between;
   align-items: center;
   width: 100%;
@@ -295,73 +337,87 @@ nav {
   margin: 0 auto;
   padding: 20px 20px;
 }
+/*set the links in the nav to display in a row and centered*/
 .nav__link--list {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: center; 
 }
-
+/*set the size of the logo image in the nav*/
 #personal-logo {
   height: 50px;
   width: 50px;
-  filter: invert(1);
+  filter: invert(1);        /*invert the color from white to black*/
 }
+/*set the dark-mode figure to a clickable cursor*/
 .nav__link--darkmode {
   cursor: pointer;
 }
+/*create space between nav links*/
 .nav__link {
   margin: 0 12px;
 }
+/*set the nav link text characteristics*/
 .nav__link--anchor {
   font-size: 18px;
   color: black;
   font-weight: 700;
 }
+/*set the font size for the dark-mode image*/
 .fa-circle-half-stroke {
   font-size: 20px;
 }
-/*--Modal--*/
+/*--------------------------- 
+        Modal
+----------------------------*/
+/*set the characteristics for the modal section*/
 .modal {
-  position: absolute;
+  position: absolute;       /*set postion to the center of the screen*/
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 90%;
+  width: 90%;               /*set width to 90% of the parent(landing page)*/
   max-width: 1100px;
-  height: 700px;
+  height: 700px;            /*set the height*/
   border-radius: 20px;
-  overflow: hidden;
-  display: flex;
+  overflow: hidden;         /*cut the edges past the border radius*/
+  display: flex;        /*set the elements to display in a column*/
   justify-content: space-between;
   visibility: hidden;
   z-index: -1;
-  transition: visibility 1s, z-index 1s, box-shadow 0.6s ease;
+  transition: visibility 1s, z-index 1s, box-shadow 0.6s ease;  /*add transition smoothly*/
 }
+/*display modal when class is added*/
 .modal--open .modal {
   z-index: 60;
   box-shadow: 0 20px 80px 0 rgba(0, 0, 0, 0.55);
   visibility: visible;
 }
+/*set the characteristics of the parent halfs in the modal*/
 .modal__half {
   width: 50%;
   padding: 40px 72px;
   position: relative;
-  transition: all 500ms ease-in;
+  transition: all 500ms ease-in;        /*add transition to come in from seperate sides*/
 }
+/*move the left modal side back to original position*/
 .modal--open .modal__about {
   transform: translateX(0%);
 }
+/*characteristics for the left side of the modal*/
 .modal__about {
   background-color: rgb(245, 245, 245);
   display: flex;
   flex-direction: column;
   justify-content: center;
-  transform: translateX(-110%);
+  transform: translateX(-110%);         /*move left modal side to 110% to the left*/
 }
+/*wrap all the language wrappers*/
 .modal__languages {
   display: flex;
   flex-wrap: wrap;
 }
+/*set each language wrapper to 1/4 of the width and display in a column centered*/
 .modal__language {
   width: 25%;
   padding: 16px;
@@ -370,28 +426,41 @@ nav {
   flex-direction: column;
   align-items: center;
 }
+/*transform the text to appear when language wrapper is hovered*/
 .modal__language:hover .language__name {
   transform: scale(1);
 }
+/*characteristics for the name under the language image*/
+.language__name {
+    position: absolute;
+    bottom: -10px;                  /*set the text 10px below the image*/
+    transform: scale(0);            /*scale is 0 to not be visible*/
+    transition: all 300ms ease;     /*transition of scale smoothly*/
+  }
+/*make the language image smaller and darker when hovered*/
 .modal__language:hover .modal__language--img {
   transform: scale(0.9);
   filter: brightness(80%);
 }
+/*characteristics for the language image in modal*/
 .modal__language--img {
   width: 100%;
   transition: all 300ms ease;
 }
+/*move the right modal side back to original position*/
 .modal--open .modal__contact {
   transform: translateX(0%);
 }
+/*characteristics for the right modal side*/
 .modal__contact {
   background-color: #242424;
   color: white;
-  display: flex;
+  display: flex;        /*display element in a centered column */
   flex-direction: column;
   justify-content: center;
-  transform: translateX(110%);
+  transform: translateX(110%);          /*move right side 110% to right of original position*/
 }
+/*characteristics for the modal text*/
 .modal__title {
   font-size: 26px;
 }
@@ -402,12 +471,6 @@ nav {
   margin-bottom: 12px;
   line-height: 1.75;
 }
-.language__name {
-  position: absolute;
-  bottom: -10px;
-  transform: scale(0);
-  transition: all 300ms ease;
-}
 .form__item {
   margin-bottom: 20px;
 }
@@ -415,6 +478,7 @@ nav {
   margin: 12px 0 24px 0;
   font-size: 14px;
 }
+/*characteristics for the submit button*/
 .form__submit {
   background-color: #f06449;
   border: 2px solid #f06449;
@@ -426,14 +490,17 @@ nav {
   font-size: 20px;
   transition: all 300ms ease;
 }
+/*when submit button is hovered change the border color and background color*/
 .form__submit:hover {
   border-color: white;
   background-color: transparent;
 }
+/*when submit button is clicked change the border color and text color*/
 .form__submit:active {
   border-color: #f06449;
   color: #f06449;
 }
+/*characteristics for the overlay element of the contact modal side*/
 .modal__overlay {
   position: absolute;
   top: 0;
@@ -444,11 +511,13 @@ nav {
   align-items: center;
   justify-content: center;
 }
+/*characteristics for the loading modal screen*/
 .modal__overlay--loading {
   background-color: #242424;
   font-size: 80px;
   z-index: -1;
 }
+/*characteristics for the success modal screen*/
 .modal__overlay--success {
   background-color: #f06449;
   font-size: 40px;
@@ -457,10 +526,12 @@ nav {
   padding: 28px;
   z-index: -1;
 }
+/*set css characteristics used in js to display different overlay screens*/
 .modal__overlay--visible {
   z-index: 1;
   display: flex;
 }
+/*add animation to spinner image to appear as if its loading*/
 .modal__overlay .fa-spinner {
   animation: spinner 900ms infinite linear;
 }
@@ -472,6 +543,7 @@ nav {
     transform: rotate(360deg);
   }
 }
+/*characteristics for the modal exit element*/
 .modal__exit {
   position: absolute;
   top: 30px;
@@ -480,45 +552,56 @@ nav {
   font-size: 36px;
   z-index: 100;
 }
-/*--Projects--*/
-
+/*--------------------------- 
+        Projects
+----------------------------*/
+/*set the section title text to center*/
 .section__title {
   text-align: center;
   font-size: 48px;
-  margin-bottom: 56px;
-  position: relative;
+  margin-bottom: 56px; /*create spacing from text at the bottom*/
+  position: relative; /*set to not be overlapped by background figures*/
 }
 .project__img {
+  /*set the image to 100% of the parent*/
   width: 100%;
   transition: transform 450ms ease;
 }
+/*set the project description to be visible when hovered over parent wrapper*/
 .project__wrapper:hover .project__description {
   opacity: 1;
-  transform: translatey(-50%);
+  transform: translatey(
+    -50%
+  ); /*move text back down to the center(50% of the parent)*/
 }
+/*set the project image to increase size by 7% and add blur effect when hovered*/
 .project__wrapper:hover .project__img {
   transform: scale(1.07);
   filter: blur(5px);
 }
 .project__wrapper {
+  /*wrapper to set the dimensions of the image and contents*/
   position: relative;
   border-radius: 20px;
   box-shadow: 0 20px 80px 0 rgb(0, 0, 0, 0.45);
-  overflow: hidden;
+  overflow: hidden; /*clips the image outside of the wrapper*/
 }
 .project__description {
+  /*set the project description to the center left*/
   position: absolute;
   top: 50%;
   left: 90px;
-  transform: translatey(100%);
+  transform: translatey(100%); /*move the text to the bottom of the wrapper*/
   color: white;
   max-width: 550px;
-  opacity: 0;
-  transition: opacity 300ms, transform 450ms ease;
+  opacity: 0; /*hide the text until hovered over*/
+  transition: opacity 300ms, transform 450ms ease; /*transition the text opacity and the movement smoothly*/
 }
+/*lower the opactity of the black background of the description*/
 .project__wrapper:hover .project__wrapper--background {
   opacity: 0.7;
 }
+/*sets the characteristics of the dark background for the text*/
 .project__wrapper--background {
   position: absolute;
   width: 100%;
@@ -528,7 +611,7 @@ nav {
   left: 0;
   opacity: 0;
 }
-
+/*sets characteristics of the project description text*/
 .project__description--title {
   font-size: 40px;
 }
@@ -545,24 +628,29 @@ nav {
   margin: 16px 0;
 }
 
-/*--Footer--*/
+/*--------------------------- 
+        Footer
+----------------------------*/
 
 footer {
-    position: relative;
+  position: relative; /*position relative to hide the background images*/
   background-color: #242424;
   display: flex;
 }
 .footer__row {
+  /*Center all footer elements*/
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 .footer__logo--img {
+  /*hard code image dimmensions for the footer*/
   width: 70px;
   height: 70px;
 }
 .footer__social--list {
+  /*display the social links in a row with padding*/
   width: 100%;
   display: flex;
   justify-content: space-around;
@@ -571,10 +659,13 @@ footer {
 }
 .footer__social--link,
 .footer__copyright {
+  /*set the color of the links to white*/
   color: white;
 }
 
-/*SHAPES*/
+/*--------------------------- 
+        Background Shapes
+----------------------------*/
 
 /*Shapes on the first row
 height = 15vh
@@ -595,94 +686,98 @@ Shapes on the third column
 height = 80vw
 
 */
-.shape{
-    position:fixed;
+.shape {
+  /*set the shape image locations to be fixed and not change*/
+  position: fixed;
 }
 
-.shape--0{
-    top: 15vh;
-    left: 5vw;
+.shape--0 {
+  top: 15vh;
+  left: 5vw;
 }
-.shape--1{
-    top: 15vh;
-    left: 50vw;
+.shape--1 {
+  top: 15vh;
+  left: 50vw;
 }
-.shape--2{
-    top: 15vh;
-    left: 80vw;
+.shape--2 {
+  top: 15vh;
+  left: 80vw;
 }
-.shape--3{
-    top: 50vh;
-    left: 5vw;
+.shape--3 {
+  top: 50vh;
+  left: 5vw;
 }
-.shape--4{
-    top: 50vh;
-    left: 50vw;
+.shape--4 {
+  top: 50vh;
+  left: 50vw;
 }
-.shape--5{
-    top: 50vh;
-    left: 80vw;
+.shape--5 {
+  top: 50vh;
+  left: 80vw;
 }
-.shape--6{
-    top: 85vh;
-    left: 5vw;
+.shape--6 {
+  top: 85vh;
+  left: 5vw;
 }
-.shape--7{
-    top: 85vh;
-    left: 50vw;
+.shape--7 {
+  top: 85vh;
+  left: 50vw;
 }
-.shape--8{
-    top: 85vh;
-    left: 80vw;
+.shape--8 {
+  top: 85vh;
+  left: 80vw;
+}
+/*--------------------------- 
+tablets, large smartphones
+----------------------------*/
+@media (max-width: 768px) {
+  .title {
+    font-size: 80px;
+  }
+  .header__para {
+    font-size: 20px;
+  }
+  .modal {
+    top: 0;
+    left: 0;
+    height: auto;
+    transform: none;
+    width: 100%;
+    flex-direction: column-reverse;
+    border-radius: 0%;
+  }
+  .modal__half {
+    width: 100%;
+    height: 50%;
+  }
 }
 
-/* small phones, tablets, large smartphones*/
-@media(max-width:768px){
-    .title{
-        font-size: 80px;
-    }
-    .header__para{
-        font-size: 20px;
-    }
-    .modal{
-        top: 0;
-        left: 0;
-        height: auto;
-        transform: none;
-        width: 100%;
-        flex-direction: column-reverse;
-        border-radius: 0%;
-    }
-    .modal__half{
-        width: 100%;
-        height: 50%;
-    }
-}
-
-/* small phones*/
-@media(max-width: 480px){
-    .title{
-        font-size: 52px;
-    }
-    .header__para{
-        font-size:18px;
-    }
-    .nav__link:first-child{
-        display: none;
-    }
-    .project__description--para{
-        display: none;
-    }
-    .project__description{
-        left: 0;
-        padding: 0;
-        width: 100%;
-        text-align: center;
-    }
-    .project__description--subtitle{
-        margin-bottom: 8px;
-    }
-    .modal__half{
-        padding: 40px;
-    }
+/*--------------------------- 
+       small phones
+----------------------------*/
+@media (max-width: 480px) {
+  .title {
+    font-size: 52px;
+  }
+  .header__para {
+    font-size: 18px;
+  }
+  .nav__link:first-child {
+    display: none;
+  }
+  .project__description--para {
+    display: none;
+  }
+  .project__description {
+    left: 0;
+    padding: 0;
+    width: 100%;
+    text-align: center;
+  }
+  .project__description--subtitle {
+    margin-bottom: 8px;
+  }
+  .modal__half {
+    padding: 40px;
+  }
 }
