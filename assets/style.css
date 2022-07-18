@@ -627,7 +627,9 @@ nav {                               /*sets characterstics of the nav section*/
 .project__description--para {
   margin: 16px 0;
 }
-
+.project{
+  margin-bottom: 36px;
+}
 /*--------------------------- 
         Footer
 ----------------------------*/
