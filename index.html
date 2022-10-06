@@ -5,20 +5,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Alexis Nunez</title>
+    <link rel="shortcut icon" href="./assets/favicon.ico" />
     <link rel="stylesheet" href="./assets/style.css" />
     <script
       src="https://kit.fontawesome.com/6b8aa863e0.js"
       crossorigin="anonymous"
     ></script>
-    <script type="text/javascript"
-        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
-</script>
-<script src="./index.js"></script>
-<script type="text/javascript">
-   (function(){
-      emailjs.init("CwS1CqbLvvLsQJ2RP");
-   })();
-</script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+    ></script>
+    <script src="./index.js"></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init("CwS1CqbLvvLsQJ2RP");
+      })();
+    </script>
   </head>
   <body class="dark-theme">
     <section id="landing-page" onmousemove="moveBackground(event)">
@@ -44,12 +46,13 @@
           <li class="nav__link" onclick="toggleModal()">
             <a
               href="#"
-              class="nav__link--anchor link__hover-effect link__hover-effect--highlight">Contact</a
+              class="nav__link--anchor link__hover-effect link__hover-effect--highlight"
+              >Contact</a
             >
           </li>
-          <li class="nav__link click" onclick = "toggleContrast()">
+          <li class="nav__link click" onclick="toggleContrast()">
             <a href="#" class="nav__link--anchor">
-                <i class="fa-solid fa-circle-half-stroke"></i>
+              <i class="fa-solid fa-circle-half-stroke"></i>
             </a>
           </li>
         </ul>
@@ -63,14 +66,23 @@
             <span class="highlight--text">Frontend Software Engineer</span> with
             a strong passion for building web applications with great user
             experiences. <br />
-            Here's a bit more <span class="highlight--text click" onclick="toggleModal()">about me</span>
+            Here's a bit more
+            <span class="highlight--text click" onclick="toggleModal()"
+              >about me</span
+            >
           </p>
         </div>
         <div class="social__links">
-          <a href="" target="_blank" class="social__link click">
+          <a
+            title="LinkedIn"
+            href="https://www.linkedin.com/in/alexis-nunez-7b468624a"
+            target="_blank"
+            class="social__link click"
+          >
             <i class="fab fa-linkedin"></i>
           </a>
           <a
+            title="Github"
             href="https://github.com/NunezAN"
             target="_blank"
             class="social__link click"
@@ -78,6 +90,7 @@
             <i class="fab fa-github"></i>
           </a>
           <a
+            title="Resume"
             href="./assets/resume.pdf"
             target="_blank"
             class="social__link click"
@@ -87,9 +100,9 @@
         </div>
       </header>
       <a href="#">
-          <button class="mail__button click" onclick="toggleModal()">
-            <i class="fa-solid fa-envelope"></i>
-          </button>
+        <button class="mail__button click" onclick="toggleModal()">
+          <i class="fa-solid fa-envelope"></i>
+        </button>
       </a>
       <a href="#projects" class="scroll">
         <div class="scroll__icon click"></div>
@@ -147,40 +160,60 @@
           </div>
         </div>
         <div class="modal__half modal__contact">
-            <i class="fas fa-times modal__exit click" onclick="toggleModal()"></i>
+          <i class="fas fa-times modal__exit click" onclick="toggleModal()"></i>
           <h3 class="modal__title modal__title--contact">Lets have a chat!</h3>
-          <h4 class="modal__sub-title modal__sub-title--contact">I'm currently open to new opportunities</h4>
+          <h4 class="modal__sub-title modal__sub-title--contact">
+            I'm currently open to new opportunities
+          </h4>
           <form id="contact__form" onsubmit="contact(event)">
             <div class="form__item">
-                <label class="form__item--label">Name</label>
-                <input class="form__item--input" name="user_name" type="text" required></input>
-            </div>   
+              <label class="form__item--label">Name</label>
+              <input
+                class="form__item--input"
+                name="user_name"
+                type="text"
+                required
+              />
+            </div>
             <div class="form__item">
-                <label class="form__item--label">E-mail</label>
-                <input class="form__item--input" name="user_email" type="email" required></input>
-            </div>   
+              <label class="form__item--label">E-mail</label>
+              <input
+                class="form__item--input"
+                name="user_email"
+                type="email"
+                required
+              />
+            </div>
             <div class="form__item">
-                <label class="form__item--label">Message</label>
-                <textarea class="form__item--input" name="message" type="text" required></textarea>
-            </div>  
-            <button type="submit" id="contact__submit" class="form__submit">Send it my way</button> 
+              <label class="form__item--label">Message</label>
+              <textarea
+                class="form__item--input"
+                name="message"
+                type="text"
+                required
+              ></textarea>
+            </div>
+            <button type="submit" id="contact__submit" class="form__submit">
+              Send it my way
+            </button>
           </form>
           <div class="modal__overlay modal__overlay--loading">
             <i class="fas fa-spinner"></i>
           </div>
-          <div class="modal__overlay modal__overlay--success">Thanks for the message! Looking forward to speaking with you soon
+          <div class="modal__overlay modal__overlay--success">
+            Thanks for the message! Looking forward to speaking with you soon
           </div>
         </div>
       </div>
-      <img src="./assets/semi circle.svg" class= "shape shape--0">
-      <img src="./assets/circle.svg" class= "shape shape--1">
-      <img src="./assets/triangle.svg" class= "shape shape--2">
-      <img src="./assets/circle.svg" class= "shape shape--3">
-      <img src="./assets/semi circle.svg" class= "shape shape--4">
-      <img src="./assets/circle.svg" class= "shape shape--5">
-      <img src="./assets/squiggly.svg" class= "shape shape--6">
-      <img src="./assets/triangle.svg" class= "shape shape--7">
-      <img src="./assets/squiggly.svg" class= "shape shape--8">
+      <img src="./assets/semi circle.svg" class="shape shape--0" />
+      <img src="./assets/circle.svg" class="shape shape--1" />
+      <img src="./assets/triangle.svg" class="shape shape--2" />
+      <img src="./assets/circle.svg" class="shape shape--3" />
+      <img src="./assets/semi circle.svg" class="shape shape--4" />
+      <img src="./assets/circle.svg" class="shape shape--5" />
+      <img src="./assets/squiggly.svg" class="shape shape--6" />
+      <img src="./assets/triangle.svg" class="shape shape--7" />
+      <img src="./assets/squiggly.svg" class="shape shape--8" />
     </section>
     <section id="projects">
       <div class="container">
@@ -191,10 +224,22 @@
           <ul class="projects__list">
             <li class="project">
               <div class="project__wrapper">
-                <img src="./assets/ecommerce.png" alt="" class="project__img" />
+                <img
+                  src="./assets/internshipCover.png"
+                  alt=""
+                  class="project__img"
+                />
                 <div class="project__wrapper--background"></div>
                 <div class="project__description">
-                  <h3 class="project__description--title">Ecommerce Project</h3>
+                  <a
+                    href="https://nunez-internship-git-main-nunezan.vercel.app/"
+                    target="_blank"
+                    class="link__hover-effect link__hover-effect--highlight"
+                  >
+                    <h3 class="project__description--title">
+                      Online Internship
+                    </h3>
+                  </a>
                   <h4 class="project__description--subtitle">
                     html,CSS, JavaScript
                   </h4>
@@ -207,10 +252,18 @@
                     vel!
                   </p>
                   <div class="project__description--links">
-                    <a href="https://github.com/NunezAN/e_commerce_01" class="project__description--link">
+                    <a
+                      href="https://github.com/NunezAN/Nunez-Internship"
+                      target="_blank"
+                      class="project__description--link"
+                    >
                       <i class="fab fa-github"></i>
                     </a>
-                    <a href="https://nunezan.github.io/e_commerce_01/" class="project__description--link">
+                    <a
+                      href="https://nunez-internship-git-main-nunezan.vercel.app/"
+                      target="_blank"
+                      class="project__description--link"
+                    >
                       <i class="fa-solid fa-link"></i>
                     </a>
                   </div>
@@ -219,10 +272,70 @@
             </li>
             <li class="project">
               <div class="project__wrapper">
-                <img src="./assets/marvelProject.png" alt="" class="project__img" />
+                <img
+                  src="./assets/blockbusterCover.png"
+                  alt=""
+                  class="project__img"
+                />
                 <div class="project__wrapper--background"></div>
                 <div class="project__description">
-                  <h3 class="project__description--title">Marvel Project</h3>
+                  <a
+                    href="https://react-library-phi.vercel.app/"
+                    target="_blank"
+                    class="nav__link--anchor link__hover-effect link__hover-effect--highlight"
+                  >
+                    <h3 class="project__description--title">
+                      Ecommerce Movie Application
+                    </h3>
+                  </a>
+                  <h4 class="project__description--subtitle">
+                    html,CSS, JavaScript
+                  </h4>
+                  <p class="project__description--para">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Suscipit est dolorum eligendi, quis quo, alias, fugit
+                    similique error voluptas unde odio amet esse numquam
+                    dolorem. Obcaecati soluta ab maiores necessitatibus.
+                    Perferendis eligendi ullam ipsa, est animi laborum fuga illo
+                    vel!
+                  </p>
+                  <div class="project__description--links">
+                    <a
+                      href="https://github.com/NunezAN/react-library"
+                      target="_blank"
+                      class="project__description--link"
+                    >
+                      <i class="fab fa-github"></i>
+                    </a>
+                    <a
+                      href="https://react-library-phi.vercel.app/"
+                      target="_blank"
+                      class="project__description--link"
+                    >
+                      <i class="fa-solid fa-link"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="project">
+              <div class="project__wrapper">
+                <img
+                  src="./assets/marvelProject.png"
+                  alt=""
+                  class="project__img"
+                />
+                <div class="project__wrapper--background"></div>
+                <div class="project__description">
+                  <a
+                    href="https://marvel-1b3e8.web.app/"
+                    target="_blank"
+                    class="nav__link--anchor link__hover-effect link__hover-effect--highlight"
+                  >
+                    <h3 class="project__description--title">
+                      Marvel Comic Application
+                    </h3>
+                  </a>
                   <h4 class="project__description--subtitle">
                     html, CSS, JavaScript
                   </h4>
@@ -235,10 +348,112 @@
                     vel!
                   </p>
                   <div class="project__description--links">
-                    <a href="https://github.com/NunezAN/marvel_project" class="project__description--link">
+                    <a
+                      href="https://github.com/NunezAN/marvel-react"
+                      target="_blank"
+                      class="project__description--link"
+                    >
                       <i class="fab fa-github"></i>
                     </a>
-                    <a href="https://nunezan.github.io/marvel_project/" class="project__description--link">
+                    <a
+                      href="https://marvel-1b3e8.web.app/"
+                      target="_blank"
+                      class="project__description--link"
+                    >
+                      <i class="fa-solid fa-link"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="project">
+              <div class="project__wrapper">
+                <img
+                  src="./assets/googleClone.png"
+                  alt=""
+                  class="project__img"
+                />
+                <div class="project__wrapper--background"></div>
+                <div class="project__description">
+                  <a
+                    href="https://clone-11a1a.web.app/"
+                    target="_blank"
+                    class="nav__link--anchor link__hover-effect link__hover-effect--highlight"
+                  >
+                    <h3 class="project__description--title">
+                      Google Clone with Gmail
+                    </h3>
+                  </a>
+                  <h4 class="project__description--subtitle">
+                    html, CSS, JavaScript
+                  </h4>
+                  <p class="project__description--para">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Suscipit est dolorum eligendi, quis quo, alias, fugit
+                    similique error voluptas unde odio amet esse numquam
+                    dolorem. Obcaecati soluta ab maiores necessitatibus.
+                    Perferendis eligendi ullam ipsa, est animi laborum fuga illo
+                    vel!
+                  </p>
+                  <div class="project__description--links">
+                    <a
+                      href="https://github.com/NunezAN/google-clone"
+                      target="_blank"
+                      class="project__description--link"
+                    >
+                      <i class="fab fa-github"></i>
+                    </a>
+                    <a
+                      href="https://clone-11a1a.web.app/"
+                      target="_blank"
+                      class="project__description--link"
+                    >
+                      <i class="fa-solid fa-link"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="project">
+              <div class="project__wrapper">
+                <img
+                  src="./assets/twitterClone.png"
+                  alt=""
+                  class="project__img"
+                />
+                <div class="project__wrapper--background"></div>
+                <div class="project__description">
+                  <a
+                    href="https://twitter-clone-e4f49.web.app/"
+                    target="_blank"
+                    class="nav__link--anchor link__hover-effect link__hover-effect--highlight"
+                  >
+                    <h3 class="project__description--title">Twitter Clone</h3>
+                  </a>
+                  <h4 class="project__description--subtitle">
+                    html, CSS, JavaScript
+                  </h4>
+                  <p class="project__description--para">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Suscipit est dolorum eligendi, quis quo, alias, fugit
+                    similique error voluptas unde odio amet esse numquam
+                    dolorem. Obcaecati soluta ab maiores necessitatibus.
+                    Perferendis eligendi ullam ipsa, est animi laborum fuga illo
+                    vel!
+                  </p>
+                  <div class="project__description--links">
+                    <a
+                      href="https://github.com/NunezAN/Twitter-clone"
+                      target="_blank"
+                      class="project__description--link"
+                    >
+                      <i class="fab fa-github"></i>
+                    </a>
+                    <a
+                      href="https://twitter-clone-e4f49.web.app/"
+                      target="_blank"
+                      class="project__description--link"
+                    >
                       <i class="fa-solid fa-link"></i>
                     </a>
                   </div>
@@ -258,24 +473,30 @@
           <div class="footer__social--list">
             <a
               href="https://github.com/NunezAN"
+              target="_blank"
               class="footer__social--link link__hover-effect link__hover-effect--white"
             >
               Github
             </a>
             <a
-              href=""
+              href="https://www.linkedin.com/in/alexis-nunez-7b468624a"
+              target="_blank"
               class="footer__social--link link__hover-effect link__hover-effect--white"
             >
               LinkedIn
             </a>
             <a
-              href="#"
+              href="https://www.linkedin.com/in/alexis-nunez-7b468624a"
+              target="_blank"
               class="footer__social--link link__hover-effect link__hover-effect--white"
-             onclick="toggleModal()">
+              onclick="toggleModal()"
+            >
               Contact
             </a>
             <a
-              href="./assets/resume.pdf" target="_blank" class="footer__social--link link__hover-effect link__hover-effect--white"
+              href="./assets/resume.pdf"
+              target="_blank"
+              class="footer__social--link link__hover-effect link__hover-effect--white"
             >
               Resume
             </a>
